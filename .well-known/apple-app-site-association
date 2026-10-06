@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["8YRF74SRL2.com.clearslimelab.app"],
+        "components": [
+          { "/": "/slime-lab/get*", "comment": "share link: opens the app when installed" },
+          { "/": "/slime-lab/open*", "comment": "explicit open-the-app link" }
+        ]
+      }
+    ]
+  }
+}
