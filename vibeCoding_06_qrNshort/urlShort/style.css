@@ -1,0 +1,86 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #2d2a4a;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d4ecff 0%, #ffd6e8 55%, #fff1c1 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+}
+.brand { font-size: 26px; font-weight: 800; color: #2d2a4a; text-decoration: none; }
+.brand span { color: #fb8500; }
+.home-link {
+  color: #2d2a4a; text-decoration: none; font-weight: 700; font-size: 14px;
+  padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, .7);
+}
+.home-link:hover { background: #fff; }
+
+.card {
+  width: min(600px, calc(100% - 32px));
+  margin: 40px auto;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .85);
+  box-shadow: 0 18px 40px rgba(45, 42, 74, .14);
+}
+h1 { font-size: 28px; }
+.sub { margin-top: 6px; color: #6b6388; font-size: 15px; }
+
+.field-label { display: block; margin: 22px 0 8px; font-weight: 700; font-size: 14px; }
+
+.row { display: flex; gap: 8px; }
+.row input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1px solid #d9d4ea;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  color: #2d2a4a;
+}
+.row input:focus { border-color: #219ebc; box-shadow: 0 0 0 3px rgba(33, 158, 188, .18); }
+#result { background: #f6f4fb; font-weight: 700; color: #1d6f86; }
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 0 22px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #8ecae6, #219ebc);
+  cursor: pointer;
+  white-space: nowrap;
+}
+button.secondary { background: linear-gradient(135deg, #ffb703, #fb8500); }
+button:disabled { background: #cfcbdc; cursor: not-allowed; }
+
+.message { min-height: 22px; margin-top: 14px; font-size: 14px; color: #c0392b; }
+.message.ok { color: #1d7a4d; }
+
+.to-qr {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #fff4dc;
+  color: #b35f00;
+  font-weight: 700;
+  text-decoration: none;
+}
+.to-qr:hover { background: #ffe9b8; }
+.hidden { display: none; }
+
+@media (max-width: 480px) {
+  .card { padding: 22px; }
+  .row { flex-direction: column; }
+  button { padding: 12px; }
+}
