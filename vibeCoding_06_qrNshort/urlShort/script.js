@@ -24,7 +24,7 @@ function jsonpShorten(host, longUrl) {
   return new Promise((resolve, reject) => {
     const cbName = 'cb_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
     const script = document.createElement('script');
-    const timer = setTimeout(() => { cleanup(); reject(new Error('timeout')); }, 8000);
+    const timer = setTimeout(() => { cleanup(); reject(new Error('timeout')); }, 5000);
 
     function cleanup() {
       clearTimeout(timer);
@@ -42,7 +42,7 @@ function jsonpShorten(host, longUrl) {
   });
 }
 
-// 예비 OpenAPI: da.gd (CORS 허용, 텍스트로 응답)
+// 기본 OpenAPI: da.gd (CORS 허용, 텍스트로 응답)
 async function dagdShorten(longUrl) {
   const res = await fetch('https://da.gd/s?url=' + encodeURIComponent(longUrl));
   if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -58,10 +58,11 @@ async function shorten() {
   message.textContent = '';
   message.className = 'message';
 
+  // 1순위 da.gd(CORS 허용) → 실패 시 is.gd, v.gd(JSONP)로 다시 시도
   const tries = [
+    () => dagdShorten(longUrl),
     () => jsonpShorten('is.gd', longUrl),
-    () => jsonpShorten('v.gd', longUrl),
-    () => dagdShorten(longUrl)
+    () => jsonpShorten('v.gd', longUrl)
   ];
 
   let shortUrl = null;
