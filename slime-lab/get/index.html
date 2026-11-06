@@ -4,32 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SLIME LAB · 슬라임랩</title>
-<meta name="description" content="투명 슬라임 만들고 조물조물 만지는 ASMR 앱 · 아이폰 무료">
+<meta name="description" content="투명 슬라임 만들고 조물조물 만지는 ASMR 앱 · 아이폰·안드로이드">
 <meta name="apple-itunes-app" content="app-id=6817754472">
 <meta property="og:title" content="SLIME LAB 슬라임랩 🫧">
-<meta property="og:description" content="투명 슬라임 만들고 조물조물 · 진짜 슬라임 소리 · 아이폰 무료">
+<meta property="og:description" content="투명 슬라임 만들고 조물조물 · 진짜 슬라임 소리 · 아이폰·안드로이드">
 <meta property="og:image" content="https://yoonwork.github.io/slime-lab/share.png">
 <meta property="og:url" content="https://yoonwork.github.io/slime-lab/get/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../../site.css">
 <script>
-  // If SLIME LAB is installed (and supports this universal link), iOS opens the app before this page loads.
-  // Otherwise send people straight to the App Store page.
-  location.replace("https://apps.apple.com/app/id6817754472");
+  // 폰 종류에 맞는 스토어로 바로 보내요: 안드로이드 → 구글 플레이, 아이폰·아이패드 → 앱스토어. 컴퓨터는 두 버튼을 보여줘요.
+  // (iOS에 앱이 깔려 있고 유니버설 링크가 되면 이 페이지가 뜨기 전에 앱이 열려요.)
+  var ua = navigator.userAgent || "";
+  var IOS = "https://apps.apple.com/app/id6817754472", PLAY = "https://play.google.com/store/apps/details?id=com.clearslimelab.app";
+  if (/Android/i.test(ua)) location.replace(PLAY);
+  else if (/iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) location.replace(IOS);
 </script>
 </head>
 <body>
 <main>
   <header>
     <span class="mark">SLIME LAB</span>
-    <h1>앱스토어로 이동 중… · Opening the App Store…</h1>
+    <h1>스토어로 이동 중… · Opening the store…</h1>
   </header>
   <section>
     <div class="app">
       <img src="../icon.png" alt="SLIME LAB 앱 아이콘" width="72" height="72">
-      <div><p>자동으로 넘어가지 않으면 아래를 눌러 주세요.<br>If nothing happens, tap below.</p></div>
+      <div><p>내 폰에 맞는 버튼을 눌러 주세요.<br>Tap the button for your phone.</p></div>
     </div>
-    <p><a href="https://apps.apple.com/app/id6817754472">App Store에서 SLIME LAB 받기 · Get SLIME LAB</a></p>
+    <p><a href="https://apps.apple.com/app/id6817754472">App Store에서 받기 · iPhone / iPad</a></p>
+    <p><a href="https://play.google.com/store/apps/details?id=com.clearslimelab.app">Google Play에서 받기 · Android</a></p>
   </section>
 </main>
 </body>
