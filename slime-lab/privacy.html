@@ -2,86 +2,126 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SLIME LAB Privacy Policy</title>
-<meta name="description" content="SLIME LAB 개인정보처리방침 · Privacy Policy">
-<link rel="stylesheet" href="../site.css">
+<!--
+  원본: 저장소 루트 privacy-policy.html. 앱 안 사본: www/privacy.html (두 파일은 글자 하나까지 같아야 해요 — npm test가 확인).
+  플랫폼마다 방침이 달라요(2026-11-10 고침).
+    안드로이드 1.3.3부터: Google AdMob 광고(동의 창에서 맞춤/비맞춤), Google Play 결제(PREMIUM).
+    아이폰: Google AdMob 광고(앱 추적 허락(ATT)에 따라 맞춤/비맞춤), Apple 인앱 구매(PREMIUM), 게임 센터 랭킹.
+  ?p=android 또는 ?p=ios 로 열면 그 플랫폼 부분만 보여요. 아무것도 없으면 둘 다 보여요.
+  바깥 글꼴·스크립트를 불러오지 않아요(안드로이드 앱은 인터넷을 안 써요).
+-->
+<style>
+:root{
+  --bg:#fff6fb; --panel:#ffffff; --ink:#3b2440; --muted:#7d6282; --line:#f1c6e0; --accent:#c4246f;
+  --display:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --ko:"Apple SD Gothic Neo","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1d1420;--panel:#281b2c;--ink:#f6e8f2;--muted:#c3a6bd;--line:#553a57;--accent:#ff7fc0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d1420;--panel:#281b2c;--ink:#f6e8f2;--muted:#c3a6bd;--line:#553a57;--accent:#ff7fc0;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ko);font-size:16px;line-height:1.7;padding:max(28px,env(safe-area-inset-top)) 16px max(48px,env(safe-area-inset-bottom))}
+main{max-width:680px;margin:0 auto;display:grid;gap:22px}
+header{display:grid;gap:6px}
+.mark{font-family:var(--display);font-weight:700;color:var(--accent);font-size:clamp(26px,7vw,36px);letter-spacing:.06em;line-height:1.1}
+h1{font-size:21px;margin:0;text-wrap:balance}
+.meta{color:var(--muted);font-size:14px;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:8px}
+nav a{border:2px solid var(--line);background:var(--panel);padding:4px 12px;text-decoration:none;font-size:14px}
+section{background:var(--panel);border:3px solid var(--line);padding:22px 20px;display:grid;gap:12px}
+h2{font-size:18px;margin:0;color:var(--accent)}
+h3{font-size:16px;margin:6px 0 0}
+p,ul{margin:0}
+ul{padding-left:1.2em;display:grid;gap:4px}
+.summary{border-left:4px solid var(--accent);padding:10px 14px;background:var(--bg);font-weight:700}
+.en{color:var(--muted);font-size:14.5px}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+[hidden]{display:none!important}
+</style>
 </head>
 <body>
 <main>
   <header>
-    <a class="mark" href="./">SLIME LAB</a>
+    <div class="mark">SLIME LAB</div>
     <h1>개인정보처리방침 · Privacy Policy</h1>
-    <p class="meta">시행일 Effective date: 2026-10-03 · Cherry Works</p>
+    <p class="meta">시행일 Effective date: 2026-11-10 · 앱 버전 1.3.4(iOS) · 1.3.9(Android)</p>
   </header>
 
-  <section lang="ko">
-    <h2>한국어</h2>
-    <p class="summary">SLIME LAB은 이름, 이메일, 연락처 같은 개인정보를 직접 수집하지 않습니다. 무료 버전에는 Google AdMob 광고가 표시되며, 광고를 보여 주기 위해 Google이 일부 기기 정보를 처리할 수 있습니다.</p>
+  <nav id="platformNav" aria-label="플랫폼">
+    <a href="#android">안드로이드 Android</a>
+    <a href="#ios">아이폰 iPhone</a>
+  </nav>
 
-    <h3>1. 기기 안에만 저장되는 정보</h3>
+  <section id="android" data-platform="android">
+    <h2>안드로이드 (Google Play) · 1.3.1부터</h2>
+    <p class="summary">개발자는 개인정보를 직접 모으지 않습니다. 광고(Google AdMob)와 Google Play 결제(PREMIUM)가 있습니다.</p>
+    <h3>수집하는 정보</h3>
+    <p>SLIME LAB(이하 "앱")은 회원가입과 로그인이 없고, 개발자는 이름, 이메일, 전화번호, 사진, 연락처 같은 개인정보를 받거나 저장하지 않습니다. 개발자가 운영하는 서버도 없습니다.</p>
+    <h3>광고 (Google AdMob)</h3>
+    <p>무료로 쓰는 동안 Google AdMob 광고가 나옵니다. 처음 실행할 때 나오는 동의 창에서 맞춤 광고를 허용할지 고를 수 있고, 허용하지 않으면 비맞춤 광고만 나옵니다. 광고를 보여 주기 위해 Google이 광고 ID, IP 주소, 기기 종류와 운영체제, 대략적인 위치, 광고 표시·탭 기록, 앱 오류 기록 같은 정보를 처리할 수 있습니다. 광고 ID는 기기 설정에서 재설정하거나 삭제할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 파트너 사이트 정책</a>을 참고해 주세요.</p>
+    <h3>인앱 결제 (SLIME LAB PREMIUM)</h3>
+    <p>PREMIUM(한 달 구독 또는 평생 구매)은 Google Play 결제로 처리됩니다. 결제 정보는 Google이 처리하며 개발자는 카드 번호 같은 결제 정보를 받지 않습니다.</p>
+    <h3>기기 안에만 저장되는 정보</h3>
     <ul>
-      <li>보관함에 저장한 슬라임(색, 재료, 파츠 구성, 저장 날짜)</li>
-      <li>소리 켜기·끄기, 언어 같은 앱 설정</li>
-      <li>프리미엄 구매 여부</li>
+      <li>보관함에 저장한 슬라임과 왁뿌볼(색, 재료, 파츠 배치, 작은 미리보기 사진, 저장 날짜)</li>
+      <li>게임 점수와 내 기록, 장난감을 누른 횟수</li>
+      <li>언어, 소리, 진동 같은 앱 설정과 PREMIUM 사용 여부</li>
     </ul>
-    <p>이 정보는 사용자의 기기 안에만 저장되며 개발자에게 전송되지 않습니다. 앱을 삭제하면 함께 지워집니다.</p>
-
-    <h3>2. 광고 (Google AdMob)</h3>
-    <p>무료 버전은 Google AdMob을 통해 배너, 전면 광고, 보상형 광고를 보여 줍니다. 광고를 표시하고 부정 클릭을 막기 위해 Google은 IP 주소(대략적인 위치), 기기 및 앱 정보, 광고 상호작용, 진단 정보를 처리할 수 있습니다.</p>
-    <ul>
-      <li>앱은 <b>맞춤형(개인화) 광고를 요청하지 않으며</b>, 기기의 광고 식별자(IDFA)를 이용한 추적 허용을 요청하지 않습니다.</li>
-      <li>모든 연령에 적합한 광고만 요청합니다.</li>
-      <li>Google의 데이터 처리 방식: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li>
-    </ul>
-
-    <h3>3. 인앱 결제</h3>
-    <p>프리미엄(광고 제거 등) 결제는 Apple App Store 또는 Google Play가 처리합니다. 개발자는 결제 카드 정보를 받거나 저장하지 않으며, 구매가 완료되었는지 여부만 확인합니다.</p>
-
-    <h3>4. 어린이의 개인정보</h3>
-    <p>앱은 어린이를 포함한 누구에게서도 이름, 연락처 같은 개인정보를 직접 수집하지 않으며, 모든 연령에 적합한 비맞춤형 광고만 요청합니다.</p>
-
-    <h3>5. 방침 변경</h3>
-    <p>이 방침이 바뀌면 이 페이지에 새 시행일과 함께 게시합니다.</p>
-
-    <h3>6. 문의</h3>
-    <p class="mail">cherry_works@kakao.com</p>
+    <p>이 정보는 기기 안에만 남고 개발자에게 전송되지 않습니다. 앱을 삭제하면 함께 지워집니다.</p>
+    <h3>알림</h3>
+    <p>알림을 허용하면 앱이 기기 안에서 다시 놀러 오라는 알림을 예약합니다. 이 알림은 서버를 거치지 않습니다.</p>
+    <p class="en">English summary: On Android the developer does not collect personal data and runs no servers. The free version shows Google AdMob ads; a consent screen lets you choose personalized or non-personalized ads, and Google may process the advertising ID, IP address, device information, approximate location and ad interactions to serve them. PREMIUM is purchased through Google Play. Saved slimes, scores and settings stay on your device.</p>
   </section>
 
-  <section lang="en">
-    <h2>English</h2>
-    <p class="summary">SLIME LAB does not directly collect personal information such as your name, email or contacts. The free version shows Google AdMob ads, and Google may process some device information to show them.</p>
-
-    <h3>1. Information stored only on your device</h3>
+  <section id="ios" data-platform="ios">
+    <h2>아이폰 (App Store)</h2>
+    <p class="summary">개발자는 개인정보를 직접 모으지 않습니다. 광고(Google AdMob), Apple 인앱 구매, 게임 센터 랭킹이 있습니다.</p>
+    <h3>광고 (Google AdMob)</h3>
+    <p>무료로 쓰는 동안 Google AdMob 광고가 나옵니다. 처음 실행할 때 앱 추적 허락(ATT) 창이 나오며, 허용하면 광고 식별자(IDFA)를 이용한 맞춤 광고가, 허용하지 않으면 비맞춤 광고가 나옵니다. 이 선택은 설정 앱 &gt; 개인정보 보호 및 보안 &gt; 추적에서 언제든 바꿀 수 있습니다. 광고를 보여 주기 위해 Google이 IP 주소, 기기 종류, 운영체제, 대략적인 위치, 광고 표시·탭 기록 같은 정보를 처리할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 파트너 사이트 정책</a>을 참고해 주세요.</p>
+    <h3>게임 센터 랭킹</h3>
+    <p>세계 랭킹은 Apple 게임 센터를 사용합니다. 게임 센터에 로그인한 경우에만 게임 점수와 장난감을 누른 횟수가 게임 센터 닉네임과 함께 랭킹에 올라가 다른 사람에게 보입니다. 로그인하지 않으면 기록은 기기 안에만 남습니다. 게임 센터 정보는 Apple이 처리합니다.</p>
+    <h3>인앱 구매 (SLIME LAB PREMIUM)</h3>
+    <p>PREMIUM(한 달 구독 또는 평생 구매)은 Apple App Store 결제로 처리됩니다. 결제 정보는 Apple이 처리하며 개발자는 이름, 카드 번호 같은 결제 정보를 받지 않습니다. 구매 여부는 기기 안에 저장되고, "구매 복원"으로 Apple에서 다시 확인할 수 있습니다.</p>
+    <h3>기기 안에만 저장되는 정보</h3>
     <ul>
-      <li>Slimes you save to your shelf (color, material, charm layout, save date)</li>
-      <li>App settings such as sound on/off and language</li>
-      <li>Whether you have bought Premium</li>
+      <li>보관함에 저장한 슬라임과 왁뿌볼(색, 재료, 파츠 배치, 작은 미리보기 사진, 저장 날짜)</li>
+      <li>게임 점수와 내 기록, 장난감을 누른 횟수</li>
+      <li>언어, 소리, 진동 같은 앱 설정과 PREMIUM 사용 여부</li>
     </ul>
-    <p>This data stays on your device and is never sent to the developer. It is removed when you delete the app.</p>
-
-    <h3>2. Ads (Google AdMob)</h3>
-    <p>The free version shows banner, interstitial and rewarded ads through Google AdMob. To show ads and prevent fraud, Google may process your IP address (approximate location), device and app information, ad interactions and diagnostics.</p>
-    <ul>
-      <li>The app <b>does not request personalized ads</b> and does not ask for permission to track you with the advertising identifier (IDFA).</li>
-      <li>The app only requests ads suitable for all ages.</li>
-      <li>How Google uses data: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li>
-    </ul>
-
-    <h3>3. In-app purchases</h3>
-    <p>Premium purchases (ad removal and more) are processed by the Apple App Store or Google Play. The developer never receives or stores your card details and only checks whether a purchase was completed.</p>
-
-    <h3>4. Children's privacy</h3>
-    <p>The app does not directly collect personal information such as names or contact details from anyone, including children, and only requests non-personalized ads suitable for all ages.</p>
-
-    <h3>5. Changes to this policy</h3>
-    <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
-
-    <h3>6. Contact</h3>
-    <p class="mail">cherry_works@kakao.com</p>
+    <p>이 정보는 개발자에게 전송되지 않으며, 앱을 삭제하면 함께 지워집니다. 회원가입이 없고 분석 도구를 쓰지 않습니다.</p>
+    <p class="en">English summary: On iPhone the developer does not collect personal data. The free version shows Google AdMob ads; the App Tracking Transparency prompt lets you allow personalized ads (using the IDFA) or keep them non-personalized, and you can change this anytime in Settings. Rankings use Apple Game Center: if you are signed in, your scores and toy tap counts appear on leaderboards with your Game Center nickname. PREMIUM is purchased through Apple; the developer never receives payment details. Saved slimes, scores and settings stay on your device.</p>
   </section>
 
-  <footer>© 2026 Cherry Works</footer>
+  <section>
+    <h2>공통</h2>
+    <h3>어린이의 개인정보</h3>
+    <p>앱은 어린이를 포함한 누구의 개인정보도 직접 수집하지 않습니다.</p>
+    <h3>제3자 처리와 보호</h3>
+    <p>광고(Google AdMob), 결제(Apple App Store·Google Play), 랭킹(Apple 게임 센터)은 각 회사가 자기 개인정보처리방침에 따라 처리합니다. 개발자는 이 회사들 외에 다른 곳에 정보를 넘기지 않으며, 각 회사는 이 방침과 같거나 더 높은 수준으로 정보를 보호합니다. 광고 데이터에 대해서는 Google의 방침(https://policies.google.com/privacy)을, 광고가 앱 성능·오류 진단을 위해 모으는 정보도 같은 방침을 따릅니다.</p>
+    <h3>보관 기간과 삭제</h3>
+    <p>기기 안에 저장한 슬라임·기록·설정은 앱을 삭제하거나 앱 안에서 지우면 바로 사라집니다. 개발자 서버에는 저장하는 정보가 없습니다. 광고·결제·게임 센터 정보의 보관과 삭제는 Google·Apple 계정 설정에서 요청할 수 있습니다.</p>
+    <h3>동의 철회와 요청 방법</h3>
+    <p>맞춤 광고 동의는 언제든 철회할 수 있습니다. 아이폰: 설정 &gt; 개인정보 보호 및 보안 &gt; 추적. 안드로이드: 설정 &gt; Google &gt; 광고에서 광고 ID 삭제·재설정. 유럽 등 동의가 필요한 지역은 앱의 "광고 개인정보 설정"에서 다시 고를 수 있습니다. 그 밖의 열람·삭제·문의는 아래 연락처로 보내 주세요.</p>
+    <p class="en">Third parties (Google AdMob, Apple, Google Play) process data under their own privacy policies with protection equal to or stronger than this policy; the developer shares data with no one else. On-device data is deleted when you delete it in the app or uninstall; the developer keeps no server copies. You can withdraw ad-personalization consent anytime (iPhone: Settings &gt; Privacy &amp; Security &gt; Tracking; Android: Settings &gt; Google &gt; Ads; EEA/UK: the in-app ad privacy settings). Contact us below for other requests.</p>
+    <h3>방침 변경</h3>
+    <p>이 방침이 바뀌면 새 시행일과 함께 앱과 스토어 안내에 게시합니다.</p>
+    <h3>문의</h3>
+    <p data-platform="ios">App Store의 SLIME LAB 페이지에 있는 개발자 연락처로 보내 주세요.</p>
+    <p data-platform="android">Google Play의 SLIME LAB 페이지에 있는 개발자 연락처로 보내 주세요.</p>
+    <p class="en">Children's privacy: the app does not itself collect personal information from anyone, including children. <span data-platform="ios">Contact: please use the developer contact on SLIME LAB's App Store page.</span><span data-platform="android">Contact: please use the developer contact on SLIME LAB's Google Play page.</span></p>
+  </section>
 </main>
+<script>
+// ?p=android / ?p=ios: 그 플랫폼 부분만 보여요(앱 안에서 열 때). 없으면 둘 다.
+(function(){
+  var p='';try{p=new URLSearchParams(location.search).get('p')||''}catch(e){}
+  if(p!=='android'&&p!=='ios')return;
+  document.querySelectorAll('[data-platform]').forEach(function(s){s.hidden=s.getAttribute('data-platform')!==p});
+  var nav=document.getElementById('platformNav');if(nav)nav.hidden=true;
+})();
+</script>
 </body>
 </html>
