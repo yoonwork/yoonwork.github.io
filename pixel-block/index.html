@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>말랑 픽셀 블록</title>
+<style>
+:root{--bg:#fff6fb;--panel:#fff;--ink:#3b2440;--muted:#7d6282;--line:#f1c6e0;--accent:#c4246f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1d1420;--panel:#281b2c;--ink:#f6e8f2;--muted:#c3a6bd;--line:#553a57;--accent:#ff7fc0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d1420;--panel:#281b2c;--ink:#f6e8f2;--muted:#c3a6bd;--line:#553a57;--accent:#ff7fc0;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.7;padding:max(28px,env(safe-area-inset-top)) 16px 48px}
+main{max-width:680px;margin:0 auto;display:grid;gap:22px}
+img{width:96px;height:96px;image-rendering:pixelated;border-radius:22px}
+.mark{font-family:ui-monospace,Menlo,monospace;font-weight:700;color:var(--accent);font-size:clamp(24px,7vw,34px)}
+section{background:var(--panel);border:3px solid var(--line);padding:22px 20px;display:grid;gap:10px}
+h2{font-size:18px;margin:0;color:var(--accent)}
+p{margin:0}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <header><img src="icon.png" alt=""><div class="mark">말랑 픽셀 블록</div><p>광고 없는 오프라인 픽셀 블록 퍼즐</p></header>
+  <section>
+    <h2>어떻게 해요?</h2>
+    <p>아래 블록 3개를 끌어서 8×8 판에 놓아요. 가로나 세로 한 줄을 채우면 펑 하고 지워져요. 여러 줄을 한 번에, 또는 연달아 지우면 콤보 점수가 붙어요. 더 놓을 곳이 없으면 끝나요.</p>
+    <h2>자주 묻는 것</h2>
+    <p><b>소리·진동 끄기:</b> 오른쪽 위 메뉴(≡)에서 켜고 끌 수 있어요.</p>
+    <p><b>기록이 사라졌어요:</b> 기록은 기기 안에만 저장돼서 앱을 지우면 함께 지워져요.</p>
+    <p><b>문의:</b> App Store의 말랑 픽셀 블록 페이지에 있는 개발자 연락처로 보내 주세요.</p>
+    <p><a href="privacy.html">개인정보처리방침</a></p>
+  </section>
+</main>
+</body>
+</html>
